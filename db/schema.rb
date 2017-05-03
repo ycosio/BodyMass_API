@@ -11,9 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170503224815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "body_masses", force: :cascade do |t|
+    t.integer  "user_id"
+    t.float    "mass"
+    t.float    "height"
+    t.string   "category"
+    t.float    "imc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
