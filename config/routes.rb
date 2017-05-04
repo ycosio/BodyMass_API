@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   get 'body_mass/index'
 
   devise_for :users
